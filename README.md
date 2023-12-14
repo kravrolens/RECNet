@@ -8,10 +8,10 @@ Beijing University of Posts and Telecommunications (BUPT)
 This repository is the official implementation of the RECNet, where more implementation details are presented.
 
 #### 2. Requirements
-```angular2html
+```
 python=3.8.16
 pytorch=2.0.1
-torchvisio=0.8
+torchvision=0.8
 cuda=11.7
 opencv-python
 ```
@@ -20,11 +20,11 @@ opencv-python
 Refer to [ENC](https://github.com/KevinJ-Huang/ExposureNorm-Compensation) for details.
 
 #### 4. Testing
-```angular2html
+```
 bash scripts/test.sh
 ```
 #### 5. Training
-```angular2html
+```a
 bash scripts/train.sh
 ```
 
