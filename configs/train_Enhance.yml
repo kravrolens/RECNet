@@ -1,0 +1,84 @@
+#### general settings
+name: STEN
+use_tb_logger: true
+model: rdp
+distortion: sr
+scale: 1
+gpu_ids: [1]
+
+#### datasets
+datasets:
+  train:
+    name: UEN
+    mode: UEN_train
+    interval_list: [1]
+    random_reverse: false
+    border_mode: false
+    cache_keys: ~
+    filelist: ./data/groups_train_mixexposure.txt
+
+    use_shuffle: true
+    n_workers: 0
+    batch_size: 8
+    IN_size: 384
+    augment: true
+    color: RGB
+
+  val:
+    name: UEN
+    mode: UEN_val
+    filelist: ./data/groups_valid_mixexposure.txt
+    batch_size: 1
+    use_shuffle: false
+
+  test:
+    name: UEN
+    mode: UEN_test
+    filelist: ./data/groups_test_mixexposure.txt
+    batch_size: 1
+    use_shuffle: false
+    mask: true
+
+#### network structures
+network_G:
+  which_model_G: RDPNet
+  nc: 8
+  groups: 8
+
+#### path
+path:
+  root: ./outputs
+  results_root: ./outputs
+  test_images: ./outputs/test_images
+  pretrain_model_G: ~
+  strict_load: false
+  resume_state: ~
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: 0.0001
+  lr_scheme: MultiStepLR
+  beta1: 0.9
+  beta2: 0.99
+  niter: 300000
+  fix_some_part: ~
+  warmup_iter: -1
+  augment: True
+  istraining: True
+  lr_steps: [150000, 225000]
+  lr_gamma: 0.5
+  eta_min: 5e-06
+  pixel_criterion: l1
+  pixel_weight: 1.0
+  ssim_weight: 0.1
+  val_epoch: 10.0
+  manual_seed: 0
+  exp_const: true
+  exc_weight: 0.1
+  mask_weight: 0.25
+  color_weight: 1.0
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_epoch: !!float 10
