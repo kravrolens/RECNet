@@ -1,4 +1,4 @@
-## Region-aware Exposure Consistency Network for Mixed Exposure Correction (AAAI 2024)
+## Region-Aware Exposure Consistency Network for Mixed Exposure Correction (AAAI 2024)
 
 Jin Liu, Huiyuan Fu, Chuanming Wang, Huadong Ma
 
@@ -35,7 +35,7 @@ If you find this work useful for your research, please cite our paper:
   title={Region-aware Exposure Consistency Network for Mixed Exposure Correction},
   author={Jin Liu, Huiyuan Fu, Chuanming Wang, Huadong Ma},
   booktitle={AAAI},
-  year={2023}
+  year={2024}
 }
 ```
 
