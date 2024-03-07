@@ -4,6 +4,8 @@ Jin Liu, Huiyuan Fu, Chuanming Wang, Huadong Ma
 
 Beijing University of Posts and Telecommunications (BUPT)
 
+The paper can be found here: https://arxiv.org/abs/2402.18217
+
 #### 1. Introduction
 This repository is the official implementation of the RECNet, where more implementation details are presented.
 
@@ -31,10 +33,10 @@ bash scripts/train.sh
 #### Citation
 If you find this work useful for your research, please cite our paper:
 ``` 
-@inproceedings{RECNet,
-  title={Region-aware Exposure Consistency Network for Mixed Exposure Correction},
-  author={Jin Liu, Huiyuan Fu, Chuanming Wang, Huadong Ma},
-  booktitle={AAAI},
+@article{liu2024region,
+  title={Region-Aware Exposure Consistency Network for Mixed Exposure Correction},
+  author={Liu, Jin and Fu, Huiyuan and Wang, Chuanming and Ma, Huadong},
+  journal={arXiv preprint arXiv:2402.18217},
   year={2024}
 }
 ```
