@@ -28,6 +28,8 @@ bash scripts/test.sh
 bash scripts/train.sh
 ```
 
+<hr />
+
 #### Citation
 If you find this work useful for your research, please consider citing:
 ``` 
